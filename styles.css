@@ -1,14 +1,21 @@
+:root {
+    --primary-color: #4049c9;
+    --text-color: #5d525f;
+    --bg-color: #f4f4f4;
+}
+
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: var(--bg-color);
     margin: 0;
     padding: 0;
+    color: var(--text-color)
 }
 
 header {
     margin: 0;
     padding: 10px;
-    background-color: #4049c9;
+    background-color: var(--primary-color);
     color: white;
     text-align: center;
 }
@@ -20,7 +27,20 @@ header h1 {
 nav a {
     color: white;
     text-decoration: none;
-    margin: 10px;
+    padding: 10px 20px 10px 20px;
+    border-radius: 10px 10px 0px 0px;
+    transition: 0.2s;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background-color: #ffffff30;
+    transition: 0.2s;
+}
+
+nav a.highlighted {
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
 
 #container {
@@ -32,9 +52,9 @@ nav a {
     padding: 50px;
     max-width: 1000px;
     font-size: 18px;
-    color: #666;
 }
 
 footer {
     text-align: center;
+    padding: 10px;
 }
