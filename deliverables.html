@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VibeQueue - Deliverables</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>VibeQueue</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="presentations.html">Presentations</a>
+            <a href="deliverables.html" class="highlighted">Deliverables</a>
+            <a href="about.html">About Us</a>
+            <a href="references.html">References</a>
+            <a href="glossary.html">Glossary</a>
+        </nav>
+    </header>
+    <div id="container">
+        <div id="content">
+            <section>
+                <h3>Current/Problem Process Flow</h3>
+                <div class="process-flow">
+                    <p>1. Business owner decides on music setup</p>
+                    <p>2. Owner chooses: Hire DJ (expensive), Simple playlist (no customization), or Manual requests (time-consuming)</p>
+                    <p>3. If manual requests: Staff must interrupt workflow to handle requests</p>
+                    <p>4. Customers have no way to influence the atmosphere</p>
+                    <p>5. Owner misses potential revenue and engagement opportunities</p>
+                </div>
+            </section>
+
+            <section>
+                <h3>Solution Process Flow</h3>
+                <div class="process-flow">
+                    <p>1. Business owner signs up for VibeQueue subscription</p>
+                    <p>2. Owner sets up QR codes at tables/devices</p>
+                    <p>3. Customer scans QR code to access song request interface</p>
+                    <p>4. Customer browses/searches songs via Spotify API</p>
+                    <p>5. Song is added to queue (subject to owner's filters)</p>
+                    <p>6. SoundMachine plays licensed music in venue</p>
+                    <p>7. Owner manages everything via Business Control Center</p>
+                </div>
+            </section>
+
+            <section>
+                <h3>Major Functional Components Diagram (MFCD)</h3>
+                <div class="mfcd">
+                    <div class="component">
+                        <h4>Spotify API</h4>
+                        <p>Allows searching and playing songs on Spotify</p>
+                    </div>
+                    <div class="component">
+                        <h4>SoundMachine</h4>
+                        <p>Plays background music in the building</p>
+                    </div>
+                    <div class="component">
+                        <h4>Web Application</h4>
+                        <p>Customer-facing interface for song requests</p>
+                    </div>
+                    <div class="component">
+                        <h4>Business Control Center</h4>
+                        <p>Owner dashboard for queue management and filters</p>
+                    </div>
+                    <div class="component">
+                        <h4>QR Code System</h4>
+                        <p>Customer access point to song request system</p>
+                    </div>
+                    <div class="component">
+                        <h4>Payment Processing</h4>
+                        <p>Pay-to-request feature with automated revenue sharing</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h3>Competition Matrix</h3>
+                <table class="competition-table">
+                    <tr>
+                        <th>Feature</th>
+                        <th>VibeQueue</th>
+                        <th>TouchTunes</th>
+                        <th>Rockbot</th>
+                        <th>Curated Background Music</th>
+                    </tr>
+                    <tr>
+                        <td>Project Stage</td>
+                        <td>Prototype</td>
+                        <td>Mature Commercial</td>
+                        <td>Established Commercial</td>
+                        <td>Mature</td>
+                    </tr>
+                    <tr>
+                        <td>Target Market</td>
+                        <td>Small local business</td>
+                        <td>Large bars & restaurants</td>
+                        <td>Medium/large business</td>
+                        <td>All sizes</td>
+                    </tr>
+                    <tr>
+                        <td>Hardware Required</td>
+                        <td>None</td>
+                        <td>Proprietary jukebox</td>
+                        <td>Dedicated hardware</td>
+                        <td>None</td>
+                    </tr>
+                    <tr>
+                        <td>Cost to Business</td>
+                        <td>Low (subscription)</td>
+                        <td>High upfront</td>
+                        <td>Medium</td>
+                        <td>Medium</td>
+                    </tr>
+                    <tr>
+                        <td>Best Use Case</td>
+                        <td>Budget-friendly/Interactive spaces</td>
+                        <td>High traffic venues</td>
+                        <td>Medium venues</td>
+                        <td>Background music only</td>
+                    </tr>
+                    <tr>
+                        <td>Web App Access</td>
+                        <td>Yes</td>
+                        <td>Limited</td>
+                        <td>Limited</td>
+                        <td>No</td>
+                    </tr>
+                </table>
+            </section>
+
+            <section>
+                <h3>Risk Matrix</h3>
+                <table class="risk-table">
+                    <tr>
+                        <th>Risk Factor</th>
+                        <th>Likelihood</th>
+                        <th>Impact</th>
+                        <th>Strategy</th>
+                    </tr>
+                    <tr>
+                        <td>Competition (TouchTunes)</td>
+                        <td>High</td>
+                        <td>Medium</td>
+                        <td>Target different market (small businesses)</td>
+                    </tr>
+                    <tr>
+                        <td>Competition (Rockbot)</td>
+                        <td>Medium</td>
+                        <td>Medium</td>
+                        <td>Focus on user convenience</td>
+                    </tr>
+                    <tr>
+                        <td>Brand Control (wrong songs)</td>
+                        <td>Low</td>
+                        <td>High</td>
+                        <td>Control center to protect the "vibe"</td>
+                    </tr>
+                    <tr>
+                        <td>Technical Implementation</td>
+                        <td>Medium</td>
+                        <td>High</td>
+                        <td>Phased development approach</td>
+                    </tr>
+                    <tr>
+                        <td>API Integration Issues</td>
+                        <td>Low</td>
+                        <td>High</td>
+                        <td>Thorough testing and fallbacks</td>
+                    </tr>
+                </table>
+            </section>
+
+            <section>
+                <h3>What It Will Do</h3>
+                <ul>
+                    <li><strong>Enable Frictionless Payment</strong> - QR code access, song browsing & requests, influence the atmosphere</li>
+                    <li><strong>Generate a Revenue Stream</strong> - Pay-to-request with automated payment processing; VibeQueue takes 5% cut</li>
+                    <li><strong>Provide Owner & Staff Control</strong> - Business Control Center dashboard, dynamic vibe moderation, queue management</li>
+                    <li><strong>Ensure Legal Compliance</strong> - Hardware agnostic (runs on existing devices), licensed streaming (ASCAP, BMI, SESAC)</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>What It Will NOT Do</h3>
+                <ul>
+                    <li>Play music without licensing - All music played will be properly licensed</li>
+                    <li>Require expensive hardware - Software-only solution</li>
+                    <li>Cater to large venues - Focused on small local businesses</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <footer>
+        <p>VibeQueue &copy; 2026 | <a href="http://www.odu.edu/">ODU</a> | <a href="http://www.cs.odu.edu/">CS Department</a></p>
+    </footer>
+</body>
+</html>

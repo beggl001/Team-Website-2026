@@ -58,3 +58,139 @@ footer {
     text-align: center;
     padding: 10px;
 }
+
+footer a {
+    color: white;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+section h3 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+}
+
+section h4 {
+    color: var(--text-color);
+    margin-top: 20px;
+}
+
+.hero {
+    text-align: center;
+    padding: 30px;
+    background-color: #e8e8e8;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.tagline {
+    font-size: 24px;
+    font-style: italic;
+    color: var(--primary-color);
+}
+
+.cta {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 10px;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background-color: #3038a0;
+}
+
+.elevator-pitch {
+    font-size: 20px;
+    font-style: italic;
+    padding: 20px;
+    background-color: #e8e8e8;
+    border-left: 4px solid var(--primary-color);
+}
+
+.process-flow {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+}
+
+.process-flow p {
+    margin: 10px 0;
+    padding-left: 20px;
+    border-left: 3px solid var(--primary-color);
+}
+
+.mfcd {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.component {
+    padding: 20px;
+    background-color: #e8e8e8;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.component h4 {
+    color: var(--primary-color);
+}
+
+.competition-table, .risk-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.competition-table th, .competition-table td,
+.risk-table th, .risk-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.competition-table th, .risk-table th {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.competition-table tr:nth-child(even), .risk-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.references li {
+    margin: 15px 0;
+}
+
+.references a {
+    color: var(--primary-color);
+}
+
+dl {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 10px;
+}
+
+dt {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+dd {
+    margin: 0;
+    padding: 5px 0;
+}
