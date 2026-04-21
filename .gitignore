@@ -1,3 +1,7 @@
 # Ignore VSCode files
 .vscode/
 *.log
+
+# Ignore MacOS files
+.DS_Store
+**/.DS_Store
