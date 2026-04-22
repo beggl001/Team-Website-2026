@@ -132,7 +132,7 @@ section h4 {
     border-left: 3px solid var(--primary-color);
 }
 
-.mfcd {
+.mfcd, .wbs {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
@@ -149,25 +149,82 @@ section h4 {
     color: var(--primary-color);
 }
 
-.competition-table, .risk-table {
+.component h5 {
+    color: var(--primary-color);
+    margin: 4px 0;
+    padding: 0;
+    text-align: left;
+}
+
+.algorithms-section {
+    margin-top: 10px;
+}
+
+.algorithms-layout {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 20px;
+    align-items: start;
+}
+
+.algo-stack {
+    display: grid;
+    gap: 14px;
+}
+
+.algo-card {
+    background-color: #e8e8e8;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.algo-card h4 {
+    margin: 0 0 10px;
+    font-size: 28px;
+    line-height: 1.2;
+    color: var(--primary-color);
+}
+
+.algo-card p {
+    margin: 8px 0;
+}
+
+.algo-map {
+    list-style: disc;
+    margin: 0;
+    padding-left: 24px;
+}
+
+.algo-map li {
+    display: grid;
+    grid-template-columns: minmax(170px, 240px) 32px 1fr;
+    align-items: baseline;
+    gap: 10px;
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.competition-table, .risk-table, .feature-table, .dependency-table {
     width: 100%;
     border-collapse: collapse;
     margin: 20px 0;
 }
 
 .competition-table th, .competition-table td,
-.risk-table th, .risk-table td {
+.risk-table th, .risk-table td,
+.feature-table th, .feature-table td,
+.dependency-table th, .dependency-table td {
     border: 1px solid #ddd;
     padding: 12px;
     text-align: left;
 }
 
-.competition-table th, .risk-table th {
+.competition-table th, .risk-table th, .feature-table th, .dependency-table th {
     background-color: var(--primary-color);
     color: white;
 }
 
-.competition-table tr:nth-child(even), .risk-table tr:nth-child(even) {
+.competition-table tr:nth-child(even), .risk-table tr:nth-child(even), .feature-table tr:nth-child(even), .dependency-table tr:nth-child(even) {
     background-color: #f9f9f9;
 }
 

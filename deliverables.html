@@ -167,16 +167,161 @@
                         <td>Control center to protect the "vibe"</td>
                     </tr>
                     <tr>
-                        <td>Technical Implementation</td>
-                        <td>Medium</td>
+                        <td>Legal & API Compliance</td>
                         <td>High</td>
-                        <td>Phased development approach</td>
+                        <td>High</td>
+                        <td>Pivot from Spotify API to Soundcharts metadata and SoundMachine playback to ensure full commercial licensing compliance
+</td>
+                    </tr>
+                </table>
+            </section>
+
+            <section>
+                <h3>Feature Table</h3>
+                <table class="feature-table">
+                    <tr>
+                        <th></th>
+                        <th>Feature</th>
+                        <th>Description</th>
+                        <th>User Roles</th>
                     </tr>
                     <tr>
-                        <td>API Integration Issues</td>
-                        <td>Low</td>
-                        <td>High</td>
-                        <td>Thorough testing and fallbacks</td>
+                        <th>User Interaction</th>
+                        <td>- QR Code Access<br>- Song Browsing<br>- Song Request<br>- Pay-to-request</td>
+                        <td>- Customers scan to access the system instantly<br>- Browse songs using filters</td>
+                        <td>Customer</td>
+                    </tr>
+                    <tr>
+                        <th>Business Control</th>
+                        <td>- Control center dashboard<br>- Queue management<br>- Content Filtering<br>- Vibe moderation</td>
+                        <td>- Central interface for managing music system<br>- Approve, reorder, or remove songs<br>- Block explicit or unwanted songs</td>
+                        <td>Owner, Staff</td>
+                    </tr>
+                    <tr>
+                        <th>System Features</th>
+                        <td>- Recommendation engine<br>- API integration<br>- Licensed Playback</td>
+                        <td>- Suggest songs based on vibe + data<br>- Connects to Soundcharts + SoundMachine<br>- Ensures legal music streaming</td>
+                        <td>System</td>
+                    </tr>
+                </table>
+            </section>
+
+            <section>
+                <h3>Work Breakdown Structure</h3>
+                <h4>Initial Sprint Breakdown (Seven 2-Week Sprints)</h4>
+                <div class="wbs">
+                    <div class="component">
+                        <h5>Sprint 1</h5>
+                        <h4>Foundation</h4>
+                        <p>Repo, CI/CD, hosting (AWS/Render); SQL schema for Users, Venues, Songs, Queue, Transactions.</p>
+                    </div>
+                    <div class="component">
+                        <h5>Sprint 2</h5>
+                        <h4>Auth & Roles</h4>
+                        <p>Owner / Staff / Customer roles, secure login, password hashing, session handling.</p>
+                    </div>
+                    <div class="component">
+                        <h5>Sprint 3</h5>
+                        <h4>Vibe Match Engine</h4>
+                        <p>Soundcharts API integration, metadata cache, genre/tempo/mood tagging, vibe-match algorithm.</p>
+                    </div>
+                    <div class="component">
+                        <h5>Sprint 4</h5>
+                        <h4>Queue & Playback</h4>
+                        <p>Queue Manager with priority logic, SoundMachine playback handoff, real-time queue updates.</p>
+                    </div>
+                    <div class="component">
+                        <h5>Sprint 5</h5>
+                        <h4>Customer Web App</h4>
+                        <p>QR-code entry, mobile-first browse/search/request UI, filter enforcement, request confirmation.</p>
+                    </div>
+                    <div class="component">
+                        <h5>Sprint 6</h5>
+                        <h4>Control Center</h4>
+                        <p>Owner dashboard: vibe filters, explicit-content blocks, queue overrides, revenue analytics.</p>
+                    </div>
+                    <div class="component">
+                        <h5>Sprint 7</h5>
+                        <h4>Payments & Pilot</h4>
+                        <p>Stripe pay-to-prioritize, profit-share reporting, end-to-end QA, pilot deployment at partner cafe.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h3>Database Schema</h3>
+                <div style="text-align: center;">
+                        <img src="assets/database-schema.png" alt="Database Schema" width="80%">
+                    </div>
+            </section>
+
+            <section class="algorithms-section">
+                <h3>Algorithms</h3>
+                <div class="algorithms-layout">
+                    <article class="algo-card">
+                        <h4>The Recommender Analogy</h4>
+                        <p>Social platforms learn what an individual likes from clicks, watch time, and skips. VibeQueue applies the same idea, but the listener is the venue, not a person.</p>
+                        <h5>How the analogy maps</h5>
+                        <ul class="algo-map">
+                            <li>
+                                <span><Strong>User profile</Strong></span>
+                                <span>&rarr;</span>
+                                <span>Venue vibe vector</span>
+                            </li>
+                            <li>
+                                <span><Strong>Engagement signals</Strong></span>
+                                <span>&rarr;</span>
+                                <span>Queue / skip / override events</span>
+                            </li>
+                            <li>
+                                <span><Strong>Recency &amp; repetition</Strong></span>
+                                <span>&rarr;</span>
+                                <span>Repeat-play penalty per shift</span>
+                            </li>
+                            <li>
+                                <span><Strong>"For You" feed</Strong></span>
+                                <span>&rarr;</span>
+                                <span>Auto-curated request menu</span>
+                            </li>
+                        </ul>
+                    </article>
+
+                    <div class="algo-stack">
+                        <article class="algo-card">
+                            <h4>Song Selection &amp; Matching</h4>
+                            <p><strong>Catalog Reconciliation.</strong> Pulls metadata from Soundcharts (artist, album, ISRC) and locates the equivalent track in SoundMachine's licensed catalog.</p>
+                            <p><strong>Fuzzy Fallback.</strong> On misses, scores candidates with token-set similarity and artist matching, then picks the closest legal match above a threshold.</p>
+                        </article>
+
+                        <article class="algo-card">
+                            <h4>Vibe Match Engine</h4>
+                            <p><strong>Feature Vector.</strong> Encodes each song across genre, BPM, energy, valence, danceability, popularity, era, and explicit flag.</p>
+                            <p><strong>Venue Profile.</strong> Owner sets a target vector per shift. Songs are ranked by weighted cosine similarity, then hard filters gate the result.</p>
+                        </article>
+
+                        <article class="algo-card">
+                            <h4>Adaptive Vibe Learning</h4>
+                            <p><strong>Implicit Feedback.</strong> Queue accepts, skips, requests-per-shift, and owner overrides nudge the venue's vibe vector over time.</p>
+                            <p><strong>Recommender-Style Loop.</strong> Uses the same learning mechanism behind a "For You" feed to adapt to a venue's atmosphere.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section >
+                <h3>Dependencies</h3>
+                <table class = "dependency-table">
+                    <tr>
+                        <th>Soundcharts API</th>
+                        <td>This is needed to access and the songs as well as collect and manage data associated</td>
+                    </tr>
+                    <tr>
+                        <th>QR code payment system</th>
+                        <td>Needs to have a system in place to allow payment through a QR code</td>
+                    </tr>
+                    <tr>
+                        <th>SoundMachine</th>
+                        <td>Is used to actually play the songs and control the playing of the music within the locations</td>
                     </tr>
                 </table>
             </section>
