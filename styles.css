@@ -251,3 +251,11 @@ dd {
     margin: 0;
     padding: 5px 0;
 }
+
+.centered-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    height: auto;
+}
