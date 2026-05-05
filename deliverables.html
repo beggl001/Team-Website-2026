@@ -12,9 +12,11 @@
         <nav>
             <a href="index.html">Home</a>
             <a href="presentations.html">Presentations</a>
-            <a href="labs.html">Labs</a>
             <a href="deliverables.html" class="highlighted">Deliverables</a>
+            <a href="stories.html">User Stories</a>
+            <a href="labs.html">Labs</a>
             <a href="about.html">About Us</a>
+            <a href="trello.html">Updates</a>
             <a href="references.html">References</a>
             <a href="glossary.html">Glossary</a>
         </nav>
@@ -73,242 +75,170 @@
                 <h3>Competition Matrix</h3>
                 <table class="competition-table">
                     <tr>
-                        <th>Feature</th>
-                        <th>VibeQueue</th>
+                        <th></th>
+                        <th>Revenue Share</th>
+                        <th>Hardware Agnostic</th>
+                        <th>Customer Song Selection</th>
+                        <th>App or Machine Required</th>
+                    </tr>
+                    <tr>
+                        <th>Vibe Queue</th>
+                        <td>67%</td>
+                        <td>&#10004;</td>
+                        <td>&#10004;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
                         <th>TouchTunes</th>
+                        <td>33-39%</td>
+                        <td></td>
+                        <td>&#10004;</td>
+                        <td>&#10004;</td>
+                    </tr>
+                    <tr>
                         <th>Rockbot</th>
-                        <th>Curated Background Music</th>
-                    </tr>
-                    <tr>
-                        <td>Project Stage</td>
-                        <td>Prototype</td>
-                        <td>Mature Commercial</td>
-                        <td>Established Commercial</td>
-                        <td>Mature</td>
-                    </tr>
-                    <tr>
-                        <td>Target Market</td>
-                        <td>Small local business</td>
-                        <td>Large bars & restaurants</td>
-                        <td>Medium/large business</td>
-                        <td>All sizes</td>
-                    </tr>
-                    <tr>
-                        <td>Hardware Required</td>
-                        <td>None</td>
-                        <td>Proprietary jukebox</td>
-                        <td>Dedicated hardware</td>
-                        <td>None</td>
-                    </tr>
-                    <tr>
-                        <td>Cost to Business</td>
-                        <td>Low (subscription)</td>
-                        <td>High upfront</td>
-                        <td>Medium</td>
-                        <td>Medium</td>
-                    </tr>
-                    <tr>
-                        <td>Best Use Case</td>
-                        <td>Budget-friendly/Interactive spaces</td>
-                        <td>High traffic venues</td>
-                        <td>Medium venues</td>
-                        <td>Background music only</td>
-                    </tr>
-                    <tr>
-                        <td>Web App Access</td>
-                        <td>Yes</td>
-                        <td>Limited</td>
-                        <td>Limited</td>
-                        <td>No</td>
+                        <td>0%</td>
+                        <td></td>
+                        <td>&#10004;</td>
+                        <td>&#10004;</td>
                     </tr>
                 </table>
             </section>
 
             <section>
                 <h3>Risk Matrix</h3>
-                <table class="risk-table">
-                    <tr>
-                        <th>Risk Factor</th>
-                        <th>Likelihood</th>
-                        <th>Impact</th>
-                        <th>Strategy</th>
-                    </tr>
-                    <tr>
-                        <td>Competition (TouchTunes)</td>
-                        <td>High</td>
-                        <td>Medium</td>
-                        <td>Target different market (small businesses)</td>
-                    </tr>
-                    <tr>
-                        <td>Competition (Rockbot)</td>
-                        <td>Medium</td>
-                        <td>Medium</td>
-                        <td>Focus on user convenience</td>
-                    </tr>
-                    <tr>
-                        <td>Brand Control (wrong songs)</td>
-                        <td>Low</td>
-                        <td>High</td>
-                        <td>Control center to protect the "vibe"</td>
-                    </tr>
-                    <tr>
-                        <td>Legal & API Compliance</td>
-                        <td>High</td>
-                        <td>High</td>
-                        <td>Pivot from Spotify API to Soundcharts metadata and SoundMachine playback to ensure full commercial licensing compliance
-</td>
-                    </tr>
-                </table>
+                <div class="risk-grid">
+                    <div>
+                        <img src="assets/customer-risk.png" alt="Customer Risk Matrix" class="process-diagram zoomable">
+                    </div>
+                    <div>
+                        <img src="assets/technical-risk.png" alt="Technical Risk Matrix" class="process-diagram zoomable">
+                    </div>
+                    <div>
+                        <img src="assets/legal-risk.png" alt="Legal & Security Risk Matrix" class="process-diagram zoomable">
+                    </div>
+                </div>
             </section>
 
             <section>
                 <h3>Feature Table</h3>
                 <table class="feature-table">
                     <tr>
-                        <th></th>
+                        <th>Category</th>
                         <th>Feature</th>
-                        <th>Description</th>
-                        <th>User Roles</th>
+                        <th>Customer</th>
+                        <th>Staff</th>
+                        <th>Owner</th>
+                        <th>RWP</th>
+                        <th>Prototype (Planned)</th>
                     </tr>
                     <tr>
-                        <th>User Interaction</th>
-                        <td>- QR Code Access<br>- Song Browsing<br>- Song Request<br>- Pay-to-request</td>
-                        <td>- Customers scan to access the system instantly<br>- Browse songs using filters</td>
-                        <td>Customer</td>
+                        <th>Account</th>
+                        <td>Account Creation</td>
+                        <td>&#10004;</td>
+                        <td>&#10004;</td>
+                        <td>&#10004;</td>
+                        <td>Creation of user accounts</td>
+                        <td>Fully Implemented</td>
                     </tr>
                     <tr>
-                        <th>Business Control</th>
-                        <td>- Control center dashboard<br>- Queue management<br>- Content Filtering<br>- Vibe moderation</td>
-                        <td>- Central interface for managing music system<br>- Approve, reorder, or remove songs<br>- Block explicit or unwanted songs</td>
-                        <td>Owner, Staff</td>
+                        <th>Account</th>
+                        <td>Login</td>
+                        <td>&#10004;</td>
+                        <td>&#10004;</td>
+                        <td>&#10004;</td>
+                        <td>Login screen and authorization</td>
+                        <td>Fully Implemented</td>
                     </tr>
                     <tr>
-                        <th>System Features</th>
-                        <td>- Recommendation engine<br>- API integration<br>- Licensed Playback</td>
-                        <td>- Suggest songs based on vibe + data<br>- Connects to Soundcharts + SoundMachine<br>- Ensures legal music streaming</td>
-                        <td>System</td>
+                        <th>Account</th>
+                        <td>Payment Processing</td>
+                        <td>&#10004;</td>
+                        <td>&#10004;</td>
+                        <td>&#10004;</td>
+                        <td>Payment processing through Stripe API</td>
+                        <td>Partially Implemented</td>
+                    </tr>
+                    <tr>
+                        <th>Song Queue</th>
+                        <td>Song Selection</td>
+                        <td>&#10004;</td>
+                        <td>&#10004;</td>
+                        <td>&#10004;</td>
+                        <td>Song selection from list</td>
+                        <td>Fully Implemented</td>
+                    </tr>
+                    <tr>
+                        <th>Song Queue</th>
+                        <td>Vibe Engine</td>
+                        <td>&#10004;</td>
+                        <td>&#10004;</td>
+                        <td>&#10004;</td>
+                        <td>Song recommendations based on venue music preferences</td>
+                        <td>Fully Implemented</td>
+                    </tr>
+                    <tr>
+                        <th>Song Queue</th>
+                        <td>Priority Boost</td>
+                        <td>&#10004;</td>
+                        <td>&#10004;</td>
+                        <td>&#10004;</td>
+                        <td>One or more tiers that push the request higher in the queue</td>
+                        <td>Partially Implemented</td>
+                    </tr>
+                    <tr>
+                        <th>Song Queue</th>
+                        <td>Block Songs (Queue Override)</td>
+                        <td></td>
+                        <td>&#10004;</td>
+                        <td>&#10004;</td>
+                        <td>Prevent songs that don’t fit the vibe from playing</td>
+                        <td>Fully Implemented</td>
+                    </tr>
+                    <tr>
+                        <th>Venue</th>
+                        <td>Blacklist Song/Genre</td>
+                        <td></td>
+                        <td></td>
+                        <td>&#10004;</td>
+                        <td>Choose which genres or moods to block from being playable</td>
+                        <td>Fully Implemented</td>
+                    </tr>
+                    <tr>
+                        <th>Venue</th>
+                        <td>View Revenue</td>
+                        <td></td>
+                        <td></td>
+                        <td>&#10004;</td>
+                        <td>Live tracking of revenue from song requests</td>
+                        <td>Partially Implemented</td>
                     </tr>
                 </table>
             </section>
 
             <section>
-                <h3>Work Breakdown Structure</h3>
-                <h4>Initial Sprint Breakdown (Seven 2-Week Sprints)</h4>
-                <div class="wbs">
-                    <div class="component">
-                        <h5>Sprint 1</h5>
-                        <h4>Foundation</h4>
-                        <p>Repo, CI/CD, hosting (AWS/Render); SQL schema for Users, Venues, Songs, Queue, Transactions.</p>
-                    </div>
-                    <div class="component">
-                        <h5>Sprint 2</h5>
-                        <h4>Auth & Roles</h4>
-                        <p>Owner / Staff / Customer roles, secure login, password hashing, session handling.</p>
-                    </div>
-                    <div class="component">
-                        <h5>Sprint 3</h5>
-                        <h4>Vibe Match Engine</h4>
-                        <p>Soundcharts API integration, metadata cache, genre/tempo/mood tagging, vibe-match algorithm.</p>
-                    </div>
-                    <div class="component">
-                        <h5>Sprint 4</h5>
-                        <h4>Queue & Playback</h4>
-                        <p>Queue Manager with priority logic, SoundMachine playback handoff, real-time queue updates.</p>
-                    </div>
-                    <div class="component">
-                        <h5>Sprint 5</h5>
-                        <h4>Customer Web App</h4>
-                        <p>QR-code entry, mobile-first browse/search/request UI, filter enforcement, request confirmation.</p>
-                    </div>
-                    <div class="component">
-                        <h5>Sprint 6</h5>
-                        <h4>Control Center</h4>
-                        <p>Owner dashboard: vibe filters, explicit-content blocks, queue overrides, revenue analytics.</p>
-                    </div>
-                    <div class="component">
-                        <h5>Sprint 7</h5>
-                        <h4>Payments & Pilot</h4>
-                        <p>Stripe pay-to-prioritize, profit-share reporting, end-to-end QA, pilot deployment at partner cafe.</p>
-                    </div>
+                <h3>Algorithms</h3>
+                <div class="diagram-grid">
+                    <figure>
+                        <img src="assets/song-selection-algorithm.png" alt="Song Selection Algorithm" class="process-diagram zoomable-300">
+                        <figcaption>Song Selection Algorithm</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="assets/queue-override-algorithm.png" alt="Queue Override Algorithm" class="process-diagram zoomable-300">
+                        <figcaption>Queue Override Algorithm</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="assets/venue-creation-algorithm.png" alt="Venue Creation Algorithm" class="process-diagram zoomable-300">
+                        <figcaption>Venue Creation Algorithm</figcaption>
+                    </figure>
                 </div>
             </section>
 
             <section>
                 <h3>Database Schema</h3>
                 <div style="text-align: center;">
-                        <img src="assets/database-schema.png" alt="Database Schema" width="80%">
+                        <img src="assets/database-schema.png" alt="Database Schema" class="zoomable" width="80%">
                     </div>
-            </section>
-
-            <section class="algorithms-section">
-                <h3>Algorithms</h3>
-                <div class="algorithms-layout">
-                    <article class="algo-card">
-                        <h4>The Recommender Analogy</h4>
-                        <p>Social platforms learn what an individual likes from clicks, watch time, and skips. VibeQueue applies the same idea, but the listener is the venue, not a person.</p>
-                        <h5>How the analogy maps</h5>
-                        <ul class="algo-map">
-                            <li>
-                                <span><Strong>User profile</Strong></span>
-                                <span>&rarr;</span>
-                                <span>Venue vibe vector</span>
-                            </li>
-                            <li>
-                                <span><Strong>Engagement signals</Strong></span>
-                                <span>&rarr;</span>
-                                <span>Queue / skip / override events</span>
-                            </li>
-                            <li>
-                                <span><Strong>Recency &amp; repetition</Strong></span>
-                                <span>&rarr;</span>
-                                <span>Repeat-play penalty per shift</span>
-                            </li>
-                            <li>
-                                <span><Strong>"For You" feed</Strong></span>
-                                <span>&rarr;</span>
-                                <span>Auto-curated request menu</span>
-                            </li>
-                        </ul>
-                    </article>
-
-                    <div class="algo-stack">
-                        <article class="algo-card">
-                            <h4>Song Selection &amp; Matching</h4>
-                            <p><strong>Catalog Reconciliation.</strong> Pulls metadata from Soundcharts (artist, album, ISRC) and locates the equivalent track in SoundMachine's licensed catalog.</p>
-                            <p><strong>Fuzzy Fallback.</strong> On misses, scores candidates with token-set similarity and artist matching, then picks the closest legal match above a threshold.</p>
-                        </article>
-
-                        <article class="algo-card">
-                            <h4>Vibe Match Engine</h4>
-                            <p><strong>Feature Vector.</strong> Encodes each song across genre, BPM, energy, valence, danceability, popularity, era, and explicit flag.</p>
-                            <p><strong>Venue Profile.</strong> Owner sets a target vector per shift. Songs are ranked by weighted cosine similarity, then hard filters gate the result.</p>
-                        </article>
-
-                        <article class="algo-card">
-                            <h4>Adaptive Vibe Learning</h4>
-                            <p><strong>Implicit Feedback.</strong> Queue accepts, skips, requests-per-shift, and owner overrides nudge the venue's vibe vector over time.</p>
-                            <p><strong>Recommender-Style Loop.</strong> Uses the same learning mechanism behind a "For You" feed to adapt to a venue's atmosphere.</p>
-                        </article>
-                    </div>
-                </div>
-            </section>
-
-            <section >
-                <h3>Dependencies</h3>
-                <table class = "dependency-table">
-                    <tr>
-                        <th>Soundcharts API</th>
-                        <td>This is needed to access and the songs as well as collect and manage data associated</td>
-                    </tr>
-                    <tr>
-                        <th>QR code payment system</th>
-                        <td>Needs to have a system in place to allow payment through a QR code</td>
-                    </tr>
-                    <tr>
-                        <th>SoundMachine</th>
-                        <td>Is used to actually play the songs and control the playing of the music within the locations</td>
-                    </tr>
-                </table>
             </section>
 
             <section>  
@@ -325,24 +255,106 @@
                         <img src="assets/business-mobile.png" alt="Business Control Center Mobile Mockup" height="422px">
                     </div>
             </section>
-
-            <section>
-                <h3>What It Will Do</h3>
-                <ul>
-                    <li><strong>Enable Frictionless Payment</strong> - QR code access, song browsing & requests, influence the atmosphere</li>
-                    <li><strong>Generate a Revenue Stream</strong> - Pay-to-request with automated payment processing; VibeQueue takes 5% cut</li>
-                    <li><strong>Provide Owner & Staff Control</strong> - Business Control Center dashboard, dynamic vibe moderation, queue management</li>
-                    <li><strong>Ensure Legal Compliance</strong> - Hardware agnostic (runs on existing devices), licensed streaming (ASCAP, BMI, SESAC)</li>
-                </ul>
+            
+            <section >
+                <h3>Dependencies</h3>
+                <table class = "dependency-table">
+                    <tr>
+                        <th>Libraries</th>
+                        <th>Tools</th>
+                        <th>Technology</th>
+                    </tr>
+                    <tr>
+                        <td>Django REST Framework</td>
+                        <td>VS Code</td>
+                        <td>Soundcharts API</td>
+                    </tr>
+                    <tr>
+                        <td>Stripe Python Library</td>
+                        <td>GitHub</td>
+                        <td>SoundMachine</td>
+                    </tr>
+                    <tr>
+                        <td>Django Channels</td>
+                        <td>GitHub Actions</td>
+                        <td>Stripe QR Mobile Payment</td>
+                    </tr>
+                    <tr>
+                        <td>Requests</td>
+                        <td>Docker</td>
+                        <td>Web Server</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>PostgreSQL</td>
+                        <td>Django(Python)</td>
+                    </tr>
+                </table>
             </section>
 
             <section>
-                <h3>What It Will NOT Do</h3>
-                <ul>
-                    <li>Play music without licensing - All music played will be properly licensed</li>
-                    <li>Require expensive hardware - Software-only solution</li>
-                    <li>Cater to large venues - Focused on small local businesses</li>
-                </ul>
+                <div class="process-flows-grid">
+                    <section class="process-flow-panel">
+                    <h3>What It Will Do</h3>
+                    <div class="process-flow">
+                        <ul>
+                            <li><strong>Easy Access & Song Selection</strong>
+                            <ul>
+                                <li>QR Code Access</li>
+                                <li>Song Browsing & Requests</li>
+                                <li>Influence the Atmosphere</li>
+                            </ul></li>
+                            <li><strong>Provide Owner & Staff Control</strong>
+                            <ul>
+                                <li>The "Business Control Center"</li>
+                                <li>Dynamic Vibe Moderation</li>
+                                <li>User Management</li>
+                            </ul></li>
+                            <li><strong>Generate a Revenue Stream</strong>
+                            <ul>
+                                <li>Pay-to-Request</li>
+                                <li>Automated Payment Processing</li>
+                                <li>Profit Sharing</li>
+                            </ul></li>
+                            <li><strong>Ensure Legal Compliance</strong>
+                            <ul>
+                                <li>Hardware Agnostic</li>
+                                <li>Licensed Streaming</li>
+                            </ul></li>
+                        </ul>
+                    </div>
+                    </section>
+                    
+                    <section class="process-flow-panel">
+                    <h3>What It Will NOT Do</h3>
+                    <div class="process-flow">
+                        <ul>
+                            <li><strong>Play Music Without Licensing</strong>
+                            <ul>
+                                <li>VibeQueue will not play any music that the business owner does not have the proper licensing to play</li>
+                            </ul></li>
+                            <li><strong>Generate New Music</strong>
+                            <ul>
+                                <li>VibeQueue will not generate custom songs for customers at this time</li>
+                            </ul></li>
+                        </ul>
+                    </div>
+                    </section>
+                </div>
+            </section>
+
+            <section>
+                <h3>Interfaces</h3>
+                <div class="diagram-grid">
+                    <figure>
+                        <img src="assets/user-interface.png" alt="User Interface" class="process-diagram zoomable-300">
+                        <figcaption>User Interface</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="assets/external-interface.png" alt="External Interface" class="process-diagram zoomable-300">
+                        <figcaption>External Interface</figcaption>
+                    </figure>
+                </div>
             </section>
         </div>
     </div>

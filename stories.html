@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VibeQueue - User Stories</title>
+    <link rel="stylesheet" href="styles.css">
+ </head>
+<body>
+    <header>
+        <h1>VibeQueue</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="presentations.html">Presentations</a>
+            <a href="deliverables.html">Deliverables</a>
+            <a href="stories.html" class="highlighted">User Stories</a>
+            <a href="labs.html">Labs</a>
+            <a href="about.html">About Us</a>
+            <a href="trello.html">Updates</a>
+            <a href="references.html">References</a>
+            <a href="glossary.html">Glossary</a>
+        </nav>
+    </header>
+
+    <div id="container">
+        <div id="content">
+            <section class="stories-hero">
+                <h2>User Stories<br><span>(Customer)</span></h2>
+            </section>
+
+            <section class="stories-grid">
+                <article class="story-card">
+                    <h4>As a customer, I want to request a song that will influence the atmosphere.</h4>
+                    <h5>Acceptance:</h5>
+                    <ul>
+                        <li>Customer can search and select a song</li>
+                        <li>Song is validated against business filters</li>
+                        <li>Request is added to the queue</li>
+                        <li>UI confirms submission</li>
+                    </ul>
+                </article>
+
+                <article class="story-card">
+                    <h4>As a customer, I want to pay to prioritize my request so that it plays sooner.</h4>
+                    <h5>Acceptance:</h5>
+                    <ul>
+                        <li>Customer can choose priority option</li>
+                        <li>Payment is processed successfully</li>
+                        <li>Request is placed higher in queue</li>
+                        <li>UI shows updated position</li>
+                    </ul>
+                </article>
+
+                <article class="story-card">
+                    <h4>As a customer, I want to browse songs so that I can easily find music I like.</h4>
+                    <h5>Acceptance:</h5>
+                    <ul>
+                        <li>Songs are displayed by genre/vibe</li>
+                        <li>Search functionality is available</li>
+                        <li>Results load quickly</li>
+                        <li>Only allowed songs are shown</li>
+                    </ul>
+                </article>
+
+                <article class="story-card">
+                    <h4>As a customer, I want to access the system via QR code so that I can quickly interact without downloading anything.</h4>
+                    <h5>Acceptance:</h5>
+                    <ul>
+                        <li>QR code opens web interface</li>
+                        <li>No login required (or simple session)</li>
+                        <li>Interface loads correctly on mobile</li>
+                        <li>User can immediately browse songs</li>
+                    </ul>
+                </article>
+            </section>
+
+            <section class="stories-hero">
+                <h2>User Stories<br><span>(Owner/Staff)</span></h2>
+            </section>
+
+            <section class="stories-grid">
+                <article class="story-card">
+                    <h4>As a business owner, I want to filter songs by genre and mood so that the music matches my brand.</h4>
+                    <h5>Acceptance:</h5>
+                    <ul>
+                        <li>Owner can set genre/mood restrictions</li>
+                        <li>Explicit content can be blocked</li>
+                        <li>Filters apply to all requests</li>
+                        <li>Disallowed songs are rejected automatically</li>
+                    </ul>
+                </article>
+
+                <article class="story-card">
+                    <h4>As a business owner, I want to monitor revenue from song requests so that I can track business value.</h4>
+                    <h5>Acceptance:</h5>
+                    <ul>
+                        <li>Revenue dashboard is available</li>
+                        <li>Payments are recorded per request</li>
+                        <li>Data updates in real time</li>
+                        <li>Owner can view totals and trends</li>
+                    </ul>
+                </article>
+
+                <article class="story-card">
+                    <h4>As a staff member, I want to override or remove songs so that I can manage inappropriate or disruptive requests.</h4>
+                    <h5>Acceptance:</h5>
+                    <ul>
+                        <li>Staff can remove songs from queue</li>
+                        <li>Queue updates immediately</li>
+                        <li>Action is reflected in UI</li>
+                        <li>Removed songs do not play</li>
+                    </ul>
+                </article>
+
+                <article class="story-card">
+                    <h4>As a staff member, I want to view and manage the queue so that I can maintain a smooth music experience.</h4>
+                    <h5>Acceptance:</h5>
+                    <ul>
+                        <li>Staff can view full queue</li>
+                        <li>Staff can reorder songs if needed</li>
+                        <li>Queue updates in real time</li>
+                        <li>Changes are reflected for all users</li>
+                    </ul>
+                </article>
+            </section>
+        </div>
+    </div>
+
+    <footer>
+        <p>VibeQueue &copy; 2026 | <a href="http://www.odu.edu/">ODU</a> | <a href="http://www.cs.odu.edu/">CS Department</a></p>
+    </footer>
+</body>
+</html>

@@ -150,13 +150,85 @@ section h4 {
     min-width: 0;
 }
 
+.risk-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    align-items: center;
+}
+
+.risk-grid > div {
+    min-width: 0;
+    text-align: center;
+}
+
+.risk-grid > div:nth-child(3) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: 50%;
+}
+
+.risk-grid img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .risk-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .risk-grid > div:nth-child(3) {
+        width: 100%;
+    }
+}
+
+.diagram-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(260px, 2fr));
+    gap: 28px;
+    align-items: start;
+}
+
+.diagram-grid figure {
+    margin: 0;
+    text-align: center;
+}
+
+.diagram-grid img {
+    display: block;
+    margin: 0 auto;
+    max-width: 95%;
+    height: auto;
+}
+
+.diagram-grid figcaption {
+    margin-top: 10px;
+    color: var(--text-color);
+    font-size: 17px;
+    font-weight: 600;
+}
+
+@media (max-width: 1100px) {
+    .diagram-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 700px) {
+    .diagram-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 .process-flow-panel .process-flow img {
     display: block;
     max-width: 100%;
     height: auto;
 }
 
-.zoomable, .zoomable-150 {
+.zoomable, .zoomable-150, .zoomable-300 {
     transition: transform 0.25s ease, box-shadow 0.25s ease;
     transform-origin: center center;
 }
@@ -171,6 +243,14 @@ section h4 {
 
 .zoomable-150:hover {
     transform: scale(1.5);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+    position: relative;
+    z-index: 1;
+    cursor: zoom-in;
+}
+
+.zoomable-300:hover {
+    transform: scale(3.0);
     box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
     position: relative;
     z-index: 1;
@@ -211,54 +291,6 @@ section h4 {
     margin: 4px 0;
     padding: 0;
     text-align: left;
-}
-
-.algorithms-section {
-    margin-top: 10px;
-}
-
-.algorithms-layout {
-    display: grid;
-    grid-template-columns: 1.1fr 1fr;
-    gap: 20px;
-    align-items: start;
-}
-
-.algo-stack {
-    display: grid;
-    gap: 14px;
-}
-
-.algo-card {
-    background-color: #e8e8e8;
-    border-radius: 10px;
-    padding: 20px;
-}
-
-.algo-card h4 {
-    margin: 0 0 10px;
-    font-size: 28px;
-    line-height: 1.2;
-    color: var(--primary-color);
-}
-
-.algo-card p {
-    margin: 8px 0;
-}
-
-.algo-map {
-    list-style: disc;
-    margin: 0;
-    padding-left: 24px;
-}
-
-.algo-map li {
-    display: grid;
-    grid-template-columns: minmax(170px, 240px) 32px 1fr;
-    align-items: baseline;
-    gap: 10px;
-    margin: 10px 0;
-    font-size: 18px;
 }
 
 .competition-table, .risk-table, .feature-table, .dependency-table {
@@ -307,6 +339,65 @@ dt {
 dd {
     margin: 0;
     padding: 5px 0;
+}
+
+/* Stories page */
+.stories-hero h2 {
+    font-size: 72px;
+    line-height: 0.95;
+    margin: 8px 0 30px 0;
+    color: #2b2730;
+    font-weight: 800;
+}
+
+.stories-hero h2 span {
+    display: block;
+    font-size: 48px;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.stories-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 36px;
+    align-items: start;
+}
+
+.story-card {
+    background-color: transparent;
+    padding: 8px 12px 20px 12px;
+}
+
+.story-card h4 {
+    font-size: 20px;
+    color: #2b2730;
+    margin: 0 0 12px 0;
+    font-weight: 700;
+}
+
+.story-card h5 {
+    color: var(--primary-color);
+    margin: 6px 0;
+    font-size: 15px;
+}
+
+.story-card ul {
+    margin: 6px 0 0 18px;
+    padding: 0;
+    color: var(--text-color);
+}
+
+@media (max-width: 1200px) {
+    .stories-hero h2 { font-size: 56px; }
+    .stories-hero h2 span { font-size: 36px; }
+    .stories-grid { grid-template-columns: repeat(2, 1fr); gap: 28px; }
+}
+
+@media (max-width: 700px) {
+    .stories-hero h2 { font-size: 36px; }
+    .stories-hero h2 span { font-size: 22px; }
+    .stories-grid { grid-template-columns: 1fr; }
 }
 
 .centered-image {
