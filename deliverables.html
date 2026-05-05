@@ -22,65 +22,50 @@
     <div id="container">
         <div id="content">
             <section>
-                <h3>Current/Problem Process Flow</h3>
-                <div class="process-flow">
-                    <p>1. Business owner decides on music setup</p>
-                    <p>2. Owner chooses: Hire DJ (expensive), Simple playlist (no customization), or Manual requests (time-consuming)</p>
-                    <p>3. If manual requests: Staff must interrupt workflow to handle requests</p>
-                    <p>4. Customers have no way to influence the atmosphere</p>
-                    <p>5. Owner misses potential revenue and engagement opportunities</p>
-                    <div style="text-align: center;">
-                        <img src="assets/process-flow.png" alt="Current Process Flow Diagram" class="process-diagram" width="80%">
+                <div class="process-flows-grid">
+                    <section class="process-flow-panel">
+                    <h3>Current/Problem Process Flow</h3>
+                    <div class="process-flow">
+                        <p>1. Business owner decides on music setup</p>
+                        <p>2. Owner chooses: Hire DJ (expensive), Simple playlist (no customization), or Manual requests (time-consuming)</p>
+                        <p>3. If manual requests: Staff must interrupt workflow to handle requests</p>
+                        <p>4. Customers have no way to influence the atmosphere</p>
+                        <p>5. Owner misses potential revenue and engagement opportunities</p>
+                        <div style="text-align: center;">
+                            <img src="assets/process-flow.png" alt="Current Process Flow Diagram" class="process-diagram zoomable">
+                        </div>
                     </div>
-                </div>
-            </section>
+                </section>
 
-            <section>
-                <h3>Solution Process Flow</h3>
-                <div class="process-flow">
-                    <p>1. Business owner signs up for VibeQueue subscription</p>
-                    <p>2. Owner sets up QR codes at tables/devices</p>
-                    <p>3. Customer scans QR code to access song request interface</p>
-                    <p>4. Customer browses/searches songs via Spotify API</p>
-                    <p>5. Song is added to queue (subject to owner's filters)</p>
-                    <p>6. SoundMachine plays licensed music in venue</p>
-                    <p>7. Owner manages everything via Business Control Center</p>
-                    <div style="text-align: center;">
-                        <img src="assets/solution-flow.png" alt="Solution Process Flow Diagram" class="process-diagram" width="80%">
+                    <section class="process-flow-panel">
+                    <h3>Solution Process Flow</h3>
+                    <div class="process-flow">
+                        <p>1. Business owner signs up for VibeQueue subscription</p>
+                        <p>2. Owner sets up QR codes at tables/devices</p>
+                        <p>3. Customer scans QR code to access song request interface</p>
+                        <p>4. Customer browses/searches songs via Spotify API</p>
+                        <p>5. Song is added to queue (subject to owner's filters)</p>
+                        <p>6. SoundMachine plays licensed music in venue</p>
+                        <p>7. Owner manages everything via Business Control Center</p>
+                        <div style="text-align: center;">
+                            <img src="assets/solution-flow.png" alt="Solution Process Flow Diagram" class="process-diagram zoomable">
+                        </div>
                     </div>
+                </section>
                 </div>
             </section>
 
             <section>
                 <h3>Major Functional Components Diagram (MFCD)</h3>
-                <div class="mfcd">
-                    <div class="component">
-                        <h4>Spotify API</h4>
-                        <p>Allows searching and playing songs on Spotify</p>
-                    </div>
-                    <div class="component">
-                        <h4>SoundMachine</h4>
-                        <p>Plays background music in the building</p>
-                    </div>
-                    <div class="component">
-                        <h4>Web Application</h4>
-                        <p>Customer-facing interface for song requests</p>
-                    </div>
-                    <div class="component">
-                        <h4>Business Control Center</h4>
-                        <p>Owner dashboard for queue management and filters</p>
-                    </div>
-                    <div class="component">
-                        <h4>QR Code System</h4>
-                        <p>Customer access point to song request system</p>
-                    </div>
-                    <div class="component">
-                        <h4>Payment Processing</h4>
-                        <p>Pay-to-request feature with automated revenue sharing</p>
-                    </div>
-                </div>
                 <div style="text-align: center;">
-                        <img src="assets/mfcd.png" alt="Major Functional Components Diagram" class="mfcd-diagram" width="80%">
+                        <img src="assets/mfcd.png" alt="Major Functional Components Diagram" class="mfcd-diagram zoomable-150" width="80%">
+                    </div>
+            </section>
+
+            <section>
+                <h3>Prototype Major Functional Components Diagram (MFCD)</h3>
+                <div style="text-align: center;">
+                        <img src="assets/prototype-mfcd.png" alt="Prototype Major Functional Components Diagram" class="mfcd-diagram zoomable-150" width="80%">
                     </div>
             </section>
 
