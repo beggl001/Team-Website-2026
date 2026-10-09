@@ -119,6 +119,15 @@ section h3 {
     gap: 20px;
 }
 
+.three-column {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.three-column div {
+    flex-grow: 1;
+}
+
 img {
     max-width: 100%;
 }
@@ -271,7 +280,7 @@ img {
     text-align: left;
 }
 
-.competition-table, .risk-table, .feature-table{
+.competition-table, .risk-table, .feature-table {
     width: 100%;
     border-collapse: collapse;
     margin: 20px 0;
@@ -286,7 +295,7 @@ img {
     text-align: left;
 }
 
-.competition-table th, .risk-table th, .feature-table th, {
+.competition-table th, .risk-table th, .feature-table th {
     background-color: var(--primary-color);
     color: white;
 }
