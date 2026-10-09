@@ -1,7 +1,8 @@
 :root {
     --primary-color: #9144de;
-    --text-color: #5d525f;
-    --bg-color: #f4f4f4;
+    --text-color: #4d3851;
+    --bg-color: #fff;
+    --bg-secondary: #efebf3;
 }
 
 body {
@@ -25,7 +26,7 @@ header h1 {
 }
 
 nav a {
-    color: white;
+    color: var(--bg-color);
     text-decoration: none;
     padding: 10px 20px 10px 20px;
     border-radius: 10px 10px 0px 0px;
@@ -34,7 +35,7 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #ffffff30;
+    background-color: #ffffff33;
     transition: 0.2s;
 }
 
@@ -44,13 +45,16 @@ nav a.highlighted {
 }
 
 #container {
+    max-width: 100%;
+    width: 1080px;
+    margin: auto;
     display: flex;
+    flex-direction: column;
     justify-content: center;
 }
 
 #content {
-    padding: 50px;
-    max-width: 1000px;
+    padding: 20px;
     font-size: 18px;
 }
 
@@ -67,23 +71,19 @@ section {
     margin-bottom: 40px;
 }
 
-section h3 {
+section h2 {
     color: var(--primary-color);
     border-bottom: 2px solid var(--primary-color);
     padding-bottom: 10px;
 }
 
-section h4 {
+section h3 {
     color: var(--text-color);
     margin-top: 20px;
 }
 
 .hero {
     text-align: center;
-    padding: 30px;
-    background-color: #e8e8e8;
-    border-radius: 10px;
-    margin-bottom: 30px;
 }
 
 .tagline {
@@ -112,31 +112,15 @@ section h4 {
     background-color: #6c3baa;
 }
 
-.elevator-pitch {
-    font-size: 20px;
-    font-style: italic;
-    padding: 20px;
-    background-color: #e8e8e8;
-    border-left: 4px solid var(--primary-color);
-}
 
-.problem-statement {
-    font-size: 20px;
-    padding: 20px;
-    background-color: #e8e8e8;
-    border-left: 4px solid var(--primary-color);
-}
-
-.problem-characteristics, .solution {
+.solution {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
 }
 
-.process-flow {
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 10px;
+img {
+    max-width: 100%;
 }
 
 .process-flows-grid {
@@ -257,12 +241,6 @@ section h4 {
     cursor: zoom-in;
 }
 
-.process-flow p {
-    margin: 10px 0;
-    padding-left: 20px;
-    border-left: 3px solid var(--primary-color);
-}
-
 @media (max-width: 900px) {
     .process-flows-grid {
         grid-template-columns: 1fr;
@@ -276,24 +254,24 @@ section h4 {
 }
 
 .component {
-    padding: 20px;
-    background-color: #e8e8e8;
+    padding: 10px 20px 10px 20px;
+    background-color: var(--bg-secondary);
     border-radius: 10px;
     text-align: center;
 }
 
-.component h4 {
+.component h3 {
     color: var(--primary-color);
 }
 
-.component h5 {
+.component h4 {
     color: var(--primary-color);
     margin: 4px 0;
     padding: 0;
     text-align: left;
 }
 
-.competition-table, .risk-table, .feature-table, .dependency-table {
+.competition-table, .risk-table, .feature-table{
     width: 100%;
     border-collapse: collapse;
     margin: 20px 0;
@@ -302,13 +280,13 @@ section h4 {
 .competition-table th, .competition-table td,
 .risk-table th, .risk-table td,
 .feature-table th, .feature-table td,
-.dependency-table th, .dependency-table td {
+.dependency-table th {
     border: 1px solid #ddd;
     padding: 12px;
     text-align: left;
 }
 
-.competition-table th, .risk-table th, .feature-table th, .dependency-table th {
+.competition-table th, .risk-table th, .feature-table th, {
     background-color: var(--primary-color);
     color: white;
 }
@@ -328,7 +306,7 @@ section h4 {
 dl {
     display: grid;
     grid-template-columns: 150px 1fr;
-    gap: 10px;
+    gap: 10px 20px;
 }
 
 dt {
@@ -342,20 +320,6 @@ dd {
 }
 
 /* Stories page */
-.stories-hero h2 {
-    font-size: 72px;
-    line-height: 0.95;
-    margin: 8px 0 30px 0;
-    color: #2b2730;
-    font-weight: 800;
-}
-
-.stories-hero h2 span {
-    display: block;
-    font-size: 48px;
-    color: var(--primary-color);
-    font-weight: 700;
-}
 
 .stories-grid {
     display: grid;
@@ -365,38 +329,32 @@ dd {
 }
 
 .story-card {
-    background-color: transparent;
     padding: 8px 12px 20px 12px;
 }
 
-.story-card h4 {
+.story-card h3 {
     font-size: 20px;
-    color: #2b2730;
+    color: var(--text-color);
     margin: 0 0 12px 0;
     font-weight: 700;
 }
 
-.story-card h5 {
+.story-card h4 {
     color: var(--primary-color);
     margin: 6px 0;
-    font-size: 15px;
+    font-size: 16px;
 }
 
 .story-card ul {
     margin: 6px 0 0 18px;
     padding: 0;
-    color: var(--text-color);
 }
 
 @media (max-width: 1200px) {
-    .stories-hero h2 { font-size: 56px; }
-    .stories-hero h2 span { font-size: 36px; }
     .stories-grid { grid-template-columns: repeat(2, 1fr); gap: 28px; }
 }
 
 @media (max-width: 700px) {
-    .stories-hero h2 { font-size: 36px; }
-    .stories-hero h2 span { font-size: 22px; }
     .stories-grid { grid-template-columns: 1fr; }
 }
 
