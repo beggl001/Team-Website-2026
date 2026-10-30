@@ -280,28 +280,29 @@ img {
     text-align: left;
 }
 
-.competition-table, .risk-table, .feature-table {
+table {
     width: 100%;
     border-collapse: collapse;
     margin: 20px 0;
+
+    th, td {
+        border: 1px solid #ddd;
+        padding: 12px;
+        text-align: left;
+    }
+
+    th {
+        background-color: var(--primary-color);
+        color: white;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
 }
 
-.competition-table th, .competition-table td,
-.risk-table th, .risk-table td,
-.feature-table th, .feature-table td,
-.dependency-table th {
-    border: 1px solid #ddd;
-    padding: 12px;
-    text-align: left;
-}
-
-.competition-table th, .risk-table th, .feature-table th {
-    background-color: var(--primary-color);
-    color: white;
-}
-
-.competition-table tr:nth-child(even), .risk-table tr:nth-child(even), .feature-table tr:nth-child(even), .dependency-table tr:nth-child(even) {
-    background-color: #f9f9f9;
+#competition-table td {
+    text-align: center;
 }
 
 .references li {
