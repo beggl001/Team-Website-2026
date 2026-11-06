@@ -1,9 +1,12 @@
 :root {
-    --primary-color: #9144de;
+    --primary-color: #20a834;
+    --primary-color-dark: #3c8922;
     --text-color: #4d3851;
     --bg-color: #fff;
     --bg-secondary: #efebf3;
 }
+
+
 
 body {
     font-family: Arial, sans-serif;
@@ -109,7 +112,7 @@ section h3 {
 }
 
 .button:hover {
-    background-color: #6c3baa;
+    background-color: var(--primary-color-dark);
 }
 
 
